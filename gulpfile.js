@@ -19,7 +19,7 @@ gulp.task('sass', function(){
     .pipe(autoprefixer({
       browsers: ['last 2 versions'],
     }))
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'nested'}))
     .pipe(gulp.dest('./'));
 });
 
@@ -40,4 +40,4 @@ gulp.task('watch', function(){
   gulp.watch('img/src/*.{png,jpg,gif}',['img']);
 });
 
-gulp.task('default',['sass','img','watch']);
+gulp.task('default',['sass','watch']);
